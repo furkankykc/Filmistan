@@ -1,0 +1,61 @@
+{% load staticfiles %}
+<!doctype html>
+<html>
+<head>
+ <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="{% static 'css/bootstrap.css' %}"/>
+<link rel="stylesheet" href="{% static 'css/style.css' %}"/>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="{% static 'js/bootstrap.min.js' %}"></script>
+
+<!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+<title>FİLMİSTAN</title>
+</head>
+
+<body>
+    <!-- Navbar Alanımız Başladı -->
+<div class="navbar navbar-inverse navbar-static-top">
+   <div class="container">
+      <div class="navbar-header">
+          <a href="#" class="navbar-brand">FİLMİSTAN</a>
+
+             <button class="navbar-toggle" data-toggle="collapse" data-target=".navbarSec">
+                     <span class="sr-only">MENÜ</span>
+                     <span clas="icon-bar"></span>
+                     <span clas="icon-bar"></span>
+                     <span clas="icon-bar"></span>
+            </button>
+      </div>
+
+           <div class=" collapse navbar-collapse  navbarSec">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="dropdown"><a href="#" title="">Anasayfa</a></li>
+                       <li class="dropdown">
+                       <a href="#" title="" class="dropdown-toggle" data-toggle="dropdown">Filmler
+                          <span class="caret"></span>
+                       </a>
+                       <ul class="dropdown-menu navbar-inverse acilirMenü">
+                            <li><a href="" title="">Vizyon Filmleri</a></li>
+                            <li><a href="" title="">Haftanın Filmleri</a></li>
+                            <li><a href="" title="">En Çok Beklenen Filmler</a></li>
+                       </ul>
+                       </li>
+                    <li class="dropdown"><a href="#" title="">Fragmanlar</a></li>
+                    <li class="dropdown"><a href="#" title="">Hakkımızda</a></li>
+                    <li class="dropdown"><a href="#" title="">İletişim</a></li>
+                    <li class="dropdown"><a href="#" title="">Profil</a></li>
+               </ul>
+         </div>
+    </div>
+</div>
+
+    <!-- Navbar Alanımız Bitti -->
+
+
+</body>
+</html>

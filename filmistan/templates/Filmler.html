@@ -1,0 +1,106 @@
+﻿{% extends 'base.html' %}
+{% load staticfiles %}
+{% block content %}
+    <style>
+    body {
+	background-color:black;
+    }
+.page-header{
+  text-align: center;
+}
+.table-bordered{
+    background-color: beige;
+    margin-left: 40px;
+    margin-right: 40px;
+}
+     .box {
+  background:#fff;
+  transition:all 0.2s ease;
+  border:2px dashed #dadada;
+  margin-top: 10px;
+  box-sizing: border-box;
+  border-radius: 5px;
+  background-clip: padding-box;
+  padding:0 20px 20px 20px;
+  min-height:340px;
+}
+.box:hover {
+  border:2px solid #525C7A;
+}
+.box span.box-title {
+    color: #fff;
+    font-size: 24px;
+    font-weight: 300;
+    text-transform: uppercase;
+}
+.box .box-content {
+  padding: 16px;
+  border-radius: 0 0 2px 2px;
+  background-clip: padding-box;
+  box-sizing: border-box;
+}
+.box .box-content p {
+  color:#515c66;
+  text-transform:none;
+
+
+
+
+.col-md-4 .text-center t{
+    padding: inherit;
+}
+
+}
+</style>
+{% endblock content %}
+{% block body %}
+    <div class="table-bordered">
+    <div class="container">
+            <div class="col-xs-12 col-sm-4">
+              <figure>
+                    <img src={% static film.profile_image %} width="333" height="500">
+               </figure>
+                 <style>
+                        .list-group-item{
+                           padding-right: 450px;
+                        }
+                    </style>
+            </div>
+          <div class="container">
+            <div class="col-xs-12 col-sm-8">
+              <ul class="list-group">
+              <li class="list-group-item">Film Adı: {{film.title}}</li>
+              <li class="list-group-item">Yönetmen: {% for g in film.director.all %}{{g.name}} {% if forloop.last != True %}{% endif %} {% endfor %}</li>
+              <li class="list-group-item">Puan: {{ film.rating }}</li>
+              <li class="list-group-item">Tür: {% for g in film.genre.all %}{{g.title}} {% if forloop.last != True %}, {% endif %} {% endfor %}</li>
+              <li class="list-group-item">Yıl: {{film.year}} </li>
+              <li class="list-group-item">Oyuncu Kadrosu: {% for g in film.cast.all %}{{g.name}} {% if forloop.last != True %}{% endif %} {% endfor %}</li>
+              <li class="list-group-item">Eklenme Tarihi: {{film.createDate}}</li>
+</ul>
+            </div>
+
+
+            </div>
+               <div class="container">
+                  <div class="row">
+                      <div class="col-md-4 text-center">
+                          <div class="box">
+                  <div class="box-content">
+                      <h1 class="tag-title">Özet</h1>
+                      <hr /> <p> {{film.description}} </p> <br/>
+              </div>
+              </div>
+              </div>
+
+      <div>
+          <div class="img-poster clearfix">
+          <iframe src='https://www.izlesene.com/embedplayer/{{ film.youtube_trailer.all.0 }}' width="730" height="420"></iframe>
+                  </div>
+
+          </div>
+    </div>
+    </div>
+    </div>
+    </div>
+
+{% endblock body %}

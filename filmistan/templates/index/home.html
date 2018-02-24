@@ -1,0 +1,24 @@
+{% load staticfiles %}
+{% load ratings %}
+
+<body>
+{% block body %}
+    <link rel="stylesheet" href="{% static 'star-ratings/css/star-ratings.css' %}">
+<script type="text/javascript" src="{% static 'star-ratings/js/dist/star-ratings.min.js' %}"></script>
+<a href="/index/">Anasayfa</a>
+
+
+{% for film in films %}
+
+<img src={{ media_root}}\{{ film.profile_image }}>
+{{ film.title }}
+{{ film.year|linebreaks }}
+{% endfor %}
+{% if user.is_authenticated %}
+    <a href="/logout/">Logout</a>
+{% else %}
+    <a href="/login/?next={{ request.path }}">Login</a>
+{% endif %}
+{% endblock body %}
+
+</body>

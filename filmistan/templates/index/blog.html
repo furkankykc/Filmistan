@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+<h1>Blog</h1>
+
+<link rel='stylesheet' href='/filmistan/templates/index/index/css/still.css' />
+<p>This is my blog.</p>
+
+{% if user.is_authenticated %}
+    <a href="/logout/">Logout</a>
+{% else %}
+    <a href="/login/?next={{ request.path }}">Login</a>
+{% endif %}
+<a href="/home/">Home</a>1

@@ -1,0 +1,34 @@
+import urllib.request as ur
+import re
+from filmistan.models import Film, Genre,Actor
+
+
+for i in range(1000, 1100):
+    site = "http://www.sinemalar.com/film/"+str(i)
+    genreRegex = '<span itemprop="genre">(.*?)</span></a>'
+    genreComp = re.compile(genreRegex)
+    titleRegex = '<h1 class=\"fl\"><span itemprop=\"name\" content=\"(.*?)\">'
+    titleComp = re.compile(titleRegex)
+    actorRegex = '<span itemprop="name">(.*?)</span></a>'
+    actorComp = re.compile(actorRegex)
+    picRegex = '<img src="(.*?)" title="'
+    tarihRegex ='<label>Vizyon Tarihi<span class="fr" >: </span></label>\r\n                    <span class="sinemalar-color">\r\n                        <strong>(.*?)</strong>'
+    tarihComp = re.compile(tarihRegex)
+    picComp = re.compile(picRegex)
+    htmlkodu = ur.urlopen(site).read()
+    titles = re.findall(titleComp, htmlkodu.decode('utf-8'))
+    genres = re.findall(genreComp, htmlkodu.decode('utf-8'))
+    actors = re.findall(actorComp, htmlkodu.decode('utf-8'))
+    pictures = re.findall(picComp, htmlkodu.decode('utf-8'))
+    tarihler = re.findall(tarihComp, htmlkodu.decode('utf-8'))
+    film = Film.objects.create()
+    for title in titles:
+        ur.urlretrieve(pictures[0],
+                       'static\\photos\\filmler\\' + title + ".jpg")
+        film.title = title
+        print(title, " ", genres, " ", actors, " ", pictures, " ", tarihler, "\n")
+    for gen in genres:
+        film.genre.add(Genre.objects.get(title=gen))
+    for act in actors:
+        Actor.objects.create(name=act)
+

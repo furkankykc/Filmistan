@@ -1,0 +1,201 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script type="">
+$(document).ready(function() {
+    $('#Carousel').carousel({
+        interval: 5000
+    })
+});
+</script>
+
+</head>
+{% block body %}
+<body>
+<link type="text/css" rel="stylesheet" href="dreamcodes/pagination/css/tsc_pagination.css" />
+
+<style>
+    body {
+	background-color:black;}
+
+ul.pagination li {
+        float: left;
+    display: inline;
+
+}
+
+ul.pagination li a {
+    color: black;
+    float: left;
+    padding: 8px 16px;
+    text-decoration: none;
+    transition: background-color .3s;
+    border: 1px solid #ddd;
+}
+
+.pagination li:first-child a {
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+.pagination li:last-child a {
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+ul.pagination li a.active {
+    background-color: #4CAF50;
+    color: white;
+    border: 1px solid #4CAF50;
+}
+
+ul.pagination li a:hover:not(.active) {background-color: #ddd;}
+    .table-bordered{
+      border:double;
+        background-color: white;
+        margin-top: 100px;
+}
+    .table-bordered{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding-right: 20px;
+    padding-left: 20px;
+
+        float: inherit;
+}
+    .sidebar{
+        margin-left: 0px;
+    }
+    .cell{
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: auto;
+        margin-bottom: auto;
+        padding-left: 10px;
+        position:absolute;
+        width: 10%;
+        float: left;
+
+
+
+    }
+    .film{
+        width: auto;
+        margin-left:40px;
+        margin-right: 40px;
+        padding-top:40px;
+        padding-left: 350px;
+        width: 10px;
+        margin-top: 50px;
+        float: left;
+        text-align: center;
+
+    }
+    .row{
+        margin-left: 40px;
+        margin-top: 20px;
+    }
+    .list-group{
+        width: 250px;
+    }
+    .container{
+        width: inherit;
+        background-color: rgba(0, 0, 0, 0.58);
+        margin-left: 0px;
+        margin-top: 0px;
+        padding: inherit;
+
+    }
+    .col-lg-3 {}
+.col-md-3{}.col-sm-4{
+            float: left;
+           }
+    .rrr{
+        float: right;
+        margin-right: 800px;
+    }
+
+
+</style>
+    <table class="table-bordered">
+  <div class=" PaddingTop_10 PaddingBottom_10 MarginBottom_0">
+    <a class=" container  MarginBottom_10 MarginTop_10 PaddingBottom_0 PaddingTop_0 MarginBottom_0" ></a>
+      <div class="container ">
+    <div class="row">
+		<div class="col-md-12 ">
+                <div id="Carousel" class="carousel slide">
+                       <div class="carousel-inner">
+                     <div class="item active">
+                	<div class="row">
+                	  <div class="col-md-3"><a href="/film/{{ fff.0.pk }}" ><img src={% static fff.0.profile_image %} width="250" height="250" alt={% static fff.0.title %} style="max-width:100%;"></a></div>
+                	  <div class="col-md-3"><a href="/film/{{ fff.1.pk }}" ><img src={% static fff.1.profile_image %} width="250" height="250" alt={% static fff.1.title %} style="max-width:100%;"></a></div>
+                	  <div class="col-md-3"><a href="/film/{{ fff.2.pk }}" ><img src={% static fff.2.profile_image %} width="250" height="250" alt={% static fff.2.title %} style="max-width:100%;"></a></div>
+                	  <div class="col-md-3"><a href="/film/{{ fff.3.pk }}" ><img src={% static fff.3.profile_image %} width="250" height="250" alt={% static fff.3.title %} style="max-width:100%;"></a></div>
+                	</div><!--.row-->
+                </div><!--.item-->
+                <div class="item">
+                	<div class="row">
+                	  <div class="col-md-3"><a href="/film/{{ f2.0.pk }}" ><img src={% static f2.0.profile_image %} width="250" height="250" alt={% static f2.title %} style="max-width:100%;"></a></div>
+                	  <div class="col-md-3"><a href="/film/{{ f2.1.pk }}" ><img src={% static f2.1.profile_image %} width="250" height="250" alt={% static f2.title %} style="max-width:100%;"></a></div>
+                	  <div class="col-md-3"><a href="/film/{{ f2.2.pk }}" ><img src={% static f2.2.profile_image %} width="250" height="250" alt={% static f2.title %} style="max-width:100%;"></a></div>
+                	  <div class="col-md-3"><a href="/film/{{ f2.3.pk }}" ><img src={% static f2.3.profile_image %} width="250" height="250" alt={% static f2.title %} style="max-width:100%;"></a></div>
+                	</div><!--.row-->
+                </div><!--.item-->
+                  <a data-slide="prev" href="#Carousel" class="left carousel-control">‹</a>
+                  <a data-slide="next" href="#Carousel" class="right carousel-control">›</a>
+                </div><!--.Carousel-->
+     		</div>
+    </div>
+</div>
+
+      </div>
+
+      </div><!--.container-->
+
+        <table id="container" >
+ <div class="cell">
+<div class="col-lg-3 col-md-3 col-sm-4 sidebar">
+         <div class="list-group">
+             <a href="" class="list-group-item" style="background:#CCCC99;"> TÜRLERİNE GÖRE<span class="badge"></span></a>
+             {% for g in genres %}
+
+                 <a href="/index/{{ g.title.split|join:"_"  }}/" class="list-group-item">{{ g.title }}<span class="badge"></span></a>
+
+
+
+             {% endfor %}
+
+
+            </div></div>
+
+            </div>
+<!-- DC Pagination:B1 Start -->
+
+<!-- DC Pagination:B1 End -->
+
+
+
+        {% for film in films %}
+            <div class="film">
+            <a  href="/film/{{ film.pk}}">{{ f.title }}<img class="" alt="" src={% static film.profile_image %} width="200" height="350"></a>
+</div>
+        {% endfor %}
+
+</div>
+  </table></table>
+<div class="rrr">
+<ul class="pagination">
+  <li><a href="/page\1\">1</a></li>
+  <li><a href="/page\2\">2</a></li>
+  <li><a href="/page\3\">3</a></li>
+  <li><a href="/page\4\">4</a></li>
+  <li><a href="/page\5\">5</a></li>
+
+</ul>
+    </div>
+
+</body>
+{% endblock body %}
+</html>

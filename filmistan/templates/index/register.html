@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>OKUL: Kullanıcı Kayıt Formu</title>
+   <link rel="stylesheet" type="text/css" href="/dosyalar/style.css" />
+</head>
+{% block body %}
+<body>
+
+<h1>Kullanıcı Kaydı</h1>
+
+    <form action="" method="post">
+        {% csrf_token %}
+        <table border="0">
+            {{ form }}
+        </table>
+        <input type="submit" value="Kayıt Yap" />
+    </form>
+
+</body>
+{% endblock body %}
+</html>

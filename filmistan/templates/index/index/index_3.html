@@ -1,0 +1,258 @@
+{% load staticfiles %}
+<!doctype html>
+<html>
+<head>
+ <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Filmistan</title>
+   <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+   <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css">
+   <link rel="stylesheet" href="{% static 'still.css' %}">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+
+<body>
+
+<div class="üst"><div class="container">
+<nav class="navbar navbar-inverse" role="navigation">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">Filmistan</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> MENÜ
+           <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Filmler</a></li>
+  	    <li role="separator" class="divider"></li>
+            <li><a href="#">Fragmanlar</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#">Hakkımızda</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="info.html">İletişim</a></li>
+          </ul>
+          </li>
+     </ul>
+      <form class="navbar-form navbar-left" role="search">
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Filmistan'da Ara">
+        </div>
+        <button type="submit" class="btn btn-default">Ara</button>
+      </form>
+      <ul class="nav navbar-nav navbar-right">
+      <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Profil<span class="caret"></span></a>
+<ul class="dropdown-menu">
+          <div class="container">
+    <h1>Profilinizi Düzenleyin</h1>
+  	<hr>
+	<div class="row">
+      <!-- left column -->
+      <div class="col-md-3">
+        <div class="text-center">
+          <img src="//placehold.it/100" class="avatar img-circle" alt="avatar">
+          <h6>Başka bir fotoğraf yükleyin...</h6>
+
+          <input type="file" class="form-control">
+        </div>
+      </div>
+
+      <!-- edit form column -->
+      <div class="col-md-9 personal-info">
+        <div class="alert alert-info alert-dismissable">
+          <a class="panel-close close" data-dismiss="alert">×</a>
+          <i class="fa fa-coffee"></i>
+          This is an <strong>.alert</strong>. Use this to show important messages to the user.
+        </div>
+        <h3>Kullanıcı Bilgileri</h3>
+
+        <form class="form-horizontal" role="form">
+          <div class="form-group">
+            <label class="col-lg-3 control-label">Ad:</label>
+            <div class="col-lg-8">
+              <input class="form-control" type="text" value="">
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-lg-3 control-label">Soyad:</label>
+            <div class="col-lg-8">
+              <input class="form-control" type="text" value="">
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-lg-3 control-label">Email:</label>
+            <div class="col-lg-8">
+              <input class="form-control" type="text" value="">
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-lg-3 control-label">Saat Dilimi:</label>
+            <div class="col-lg-8">
+              <div class="ui-select">
+                <select id="user_time_zone" class="form-control">
+                  <option value="Hawaii">(GMT-10:00) Hawaii</option>
+                  <option value="Alaska">(GMT-09:00) Alaska</option>
+                  <option value="Pacific Time (US &amp; Canada)">(GMT-08:00) Pacific Time (US &amp; Canada)</option>
+                  <option value="Arizona">(GMT-07:00) Arizona</option>
+                  <option value="Mountain Time (US &amp; Canada)">(GMT-07:00) Mountain Time (US &amp; Canada)</option>
+                  <option value="Central Time (US &amp; Canada)" selected="selected">(GMT-06:00) Central Time (US &amp; Canada)</option>
+                  <option value="Eastern Time (US &amp; Canada)">(GMT-05:00) Eastern Time (US &amp; Canada)</option>
+                  <option value="Indiana (East)">(GMT-05:00) Indiana (East)</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-md-3 control-label">Kullanıcı Adı:</label>
+            <div class="col-md-8">
+              <input class="form-control" type="text" value="">
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-md-3 control-label">Parola:</label>
+            <div class="col-md-8">
+              <input class="form-control" type="password" value="">
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-md-3 control-label">Parolayı Doğrula:</label>
+            <div class="col-md-8">
+              <input class="form-control" type="password" value="">
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-md-3 control-label"></label>
+            <div class="col-md-8">
+              <input type="button" class="btn btn-primary" value="Değişiklikleri Kaydet">
+              <span></span>
+              <input type="reset" class="btn btn-default" value="Çık">
+            </div>
+          </div>
+        </form>
+      </div>
+  </div>
+</div>
+<hr>
+
+
+
+         </ul>
+        </li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+</div><!--.container-->
+</div><!--.üst-->
+
+
+<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+  <!-- Indicators -->
+  <ol class="carousel-indicators">
+    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+  </ol>
+
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner" role="listbox">
+    <div class="item active">
+      <div class="carousel-caption">
+        <h2></h2>
+
+ <br/> <a href="#" class="btn btn-primary">Sayfaya Git</a>
+ </div>
+    </div>
+    <div class="item">
+      <div class="carousel-caption">
+      <h2></h2>
+
+      <br/> <a href="#" class="btn btn-primary">Sayfaya Git</a>
+
+ </div>
+    </div> <div class="item">
+      <div class="carousel-caption">
+       <h2></h2>
+
+<br/> <a href="#" class="btn btn-primary">Sayfaya Git</a>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- Controls -->
+  <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+<div class="container içerik">
+    <div class="row">
+
+
+    <div class="col-lg-4">
+     <h2>Haftanın Filmleri</h2>
+       <img src="https://placeholdit.imgix.net/~text?txtsize=33&txt=200%C3%97200&w=200&h=200">
+     <br/><img src="https://placeholdit.imgix.net/~text?txtsize=33&txt=200%C3%97200&w=200&h=200c">
+     <br/><a href="#" class="btn btn-default">Devamı</a>
+     </div>
+
+
+     <div class="col-lg-4">
+     <h2>Vizyon Filmleri</h2>
+       <img src="https://placeholdit.imgix.net/~text?txtsize=33&txt=200%C3%97200&w=200&h=200">
+     <br/><img src="https://placeholdit.imgix.net/~text?txtsize=33&txt=200%C3%97200&w=200&h=200c">
+     <br/><a href="#" class="btn btn-default">Devamı</a>
+     </div>
+
+     <div class="col-lg-4">
+     <h2>En Çok Beklenen Filmler</h2>
+       <img src="https://placeholdit.imgix.net/~text?txtsize=33&txt=200%C3%97200&w=200&h=200">
+     <br/><img src="https://placeholdit.imgix.net/~text?txtsize=33&txt=200%C3%97200&w=200&h=200c">
+     <br/><a href="#" class="btn btn-default">Devamı</a>
+     </div>
+
+     </div>
+</div>
+
+<div class="container">
+ <div class="row">
+ <div class="col-lg-6">
+<!-- 16:9 aspect ratio -->
+<div class="embed-responsive embed-responsive-16by9">
+  <iframe class="embed-responsive-item" src="https://www.youtube.com/watch?v=azqkiFg_Kj0" frameborder="0" allowfullscreen ></iframe>
+</div>
+</div>
+</div>
+</div>
+
+
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+       <script src="{% static 'js/bootstrap.min.js' %}"></script>
+</body>
+</html>

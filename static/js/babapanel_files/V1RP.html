@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<!-- saved from url=(0049)http://d2d3qesrx8xj6s.cloudfront.net/siframe/V1RP -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="robots" content="noindex">
+
+    <title>Panels - Bootsnipp.com</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="./bootstrap.min(1).css" rel="stylesheet" id="bootstrap-css">
+    <style type="text/css">
+    @import url(http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css);
+
+
+.panel-heading .btn-clickable
+{
+display: inline-block;
+margin-top: -25px;
+font-size: 15px;
+margin-right: -10px;
+padding: 4px 10px;
+border-radius: 4px
+}
+ 
+ 
+.panel-heading span
+{
+margin-top: -23px;
+font-size: 15px;
+margin-right: -9px;
+}
+
+ div.container div.row div.col-md-12 div.panel div.panel-heading h3.panel-title
+{
+font-size: 20px;
+font-weight: 700pt;
+|
+
+html {
+transform-origin: 0px 0px 0px;
+-webkit-transform-origin: 0px 0px 0px;
+-moz-transform-origin: 0px 0px 0px;
+-o-transform-origin: 0px 0px 0px;
+transform: scale(0.5);
+-webkit-transform: scale(0.5);
+-moz-transform: scale(0.5);
+-o-transform: scale(0.5);
+}
+    </style>
+    <script src="./jquery-1.10.2.min.js"></script><style type="text/css"></style>
+    <script src="./bootstrap.min(2).js"></script>
+    <script type="text/javascript">
+        window.alert = function(){};
+        var defaultCSS = document.getElementById('bootstrap-css');
+        function changeCSS(css){
+            if(css) $('head > link').filter(':first').replaceWith('<link rel="stylesheet" href="'+ css +'" type="text/css" />'); 
+            else $('head > link').filter(':first').replaceWith(defaultCSS); 
+        }
+        $( document ).ready(function() {
+          var iframe_height = parseInt($('html').height()); 
+          window.parent.postMessage( iframe_height, 'http://bootsnipp.com');
+        });
+    </script>
+</head>
+<body>
+	 <br>
+ <br>
+ 
+    <div class="container">
+    
+        <div class="row">
+        
+            <div class="col-md-12">
+                <div class="panel panel-success">
+                
+                    <div class="panel-heading">
+                        <h3 class="panel-title">
+                            Click Button
+                        </h3>
+                        <a class="btn btn-success btn-clickable pull-right" href="http://d2d3qesrx8xj6s.cloudfront.net/siframe/V1RP#">
+                            <i class="fa fa-chevron-down"></i> 
+                        </a>
+                    </div>
+                    
+                    <div class="panel-body">
+                    
+                    
+                    </div>
+                    
+                </div> 
+            </div>
+            
+        </div>
+
+    <div class="row">
+    
+        <div class="col-md-12">
+            <div class="panel panel-info">
+            
+                <div class="panel-heading">
+                    <h3 class="panel-title">
+                        Click Button
+                    </h3>
+                    <a class="btn btn-info btn-clickable pull-right" href="http://d2d3qesrx8xj6s.cloudfront.net/siframe/V1RP#" style="margin-left:5px;">
+                        <i class="fa fa-chevron-right"></i> 
+                    </a>
+                     <a class="btn btn-info btn-clickable pull-right" href="http://d2d3qesrx8xj6s.cloudfront.net/siframe/V1RP#" style="margin-right:5px;">
+                        <i class="fa fa-chevron-left"></i> 
+                    </a>
+                </div>
+                
+                <div class="panel-body">
+                
+                    <div class="col-sm-6 col-md-4">
+                        <div class="thumbnail">
+                          <img data-src="holder.js/350x260" alt="Generic placeholder thumbnail">
+                          <div class="caption">
+                            <h3>Thumbnail label</h3>
+                            <p><a href="http://d2d3qesrx8xj6s.cloudfront.net/siframe/V1RP#" class="btn btn-primary" role="button">Button</a> <a href="http://d2d3qesrx8xj6s.cloudfront.net/siframe/V1RP#" class="btn btn-default" role="button">Button</a></p>
+                          </div>
+                        </div>
+                    </div>
+                    
+                </div>
+                
+            </div>
+        </div>
+    
+    </div>
+
+      
+
+</div>
+
+	<script type="text/javascript">
+	$(document).on('click', '.panel-heading .btn-clickable', function(e){
+    var $this = $(this);
+    if(!$this.hasClass('panel-collapsed')) {
+		$this.parents('.panel').find('.panel-body').slideUp();
+		$this.addClass('panel-collapsed');
+		$this.find('i').removeClass('fa-chevron-up').addClass('fa-chevron-down');
+	} else {
+		$this.parents('.panel').find('.panel-body').slideDown();
+		$this.removeClass('panel-collapsed');
+		$this.find('i').removeClass('fa-chevron-down').addClass('fa-chevron-up');
+	}
+})
+	</script>
+
+
+</body></html>

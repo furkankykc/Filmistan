@@ -1,0 +1,33 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+/*Marginlerimiz */
+.MarginTop_0 { margin-top:10!important;}
+.MarginBottom_0 { margin-bottom: 0!important;}
+.MarginTop_10 { margin-top: 10px!important;}
+.MarginBottom_10 { margin-bottom: 10!important;}
+
+/*Paddinglerimiz */
+.Padding_5{padding:5px!important;}
+.Padding_10{padding:10px!important;}
+.PaddingTop_0 { padding-top: 0!important;}
+.PaddingBottom_0 { padding-bottom: 0!important;}
+.PaddingTop_10 { padding-top: 10px!important;}
+.PaddingBottom_10 { padding-bottom: 10px!important;}
+.PaddingTop_20 { padding-top: 20px!important;}
+.PaddingBottom_20 { padding-bottom: 20px!important;}
+.BgGri{background-color:#cfcfcf;}
+/*Arkaplan Renkleri */
+
+.BgWhite{background-color:#fff;}
+.BgWhiteGri{background-color:#D2D2D2;}
+.BgWhiteDark{background-color:#aaa;}
+
+/* Yükseklikler */
+
+.BlokMaxHeight_300{max-height:300px!important; width:100%!important;}
+
+
+.BlockYap{ display:block!important;}
+.Pointer{cursor:pointer;}

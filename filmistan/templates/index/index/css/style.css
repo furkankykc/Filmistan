@@ -1,0 +1,62 @@
+@charset "utf-8";
+/* CSS Document */
+/*Sıfırlamalar*/
+a {color:#282828;} a:hover{color:#983BE8; text-decoration:none;}
+
+/* Body */
+body
+{ 
+    background:url() top left repeat;
+}
+
+/* Menu Alanımız */
+#MyMenu
+{}
+.acilirMenü li a
+{
+	color:#D58C8D!important;
+}
+.acilirMenü li a:hover
+{
+	color:#131313!important;
+}
+/* Slide Alanımız */
+#MySlide .item img
+{
+	max-height:450px!important;
+	width:100%!important;
+}
+/* Anasayfa Makale Listeleme Bölümü */
+.AnasayfaTab div{border:1px  solid #dadada; background:#dfdfdf; padding:10px;}
+.AnasayfaTab div:hover{ background:#d8d8d8;}
+.AnasayfaTab div h3{margin-top:5px!important;}
+.MakaleEkleyenBilgi{ font-size: 13px; color:636363;}
+.MakaleEkleyenBilgi{ font-size: 13px; color:636363;}
+.MakaleEkleyenBilgi span{font-size: 14px; color:353535;}
+.AnasayfaMakaleResimLink{ background:none; margin: 4px 5px 3px o; padding:0;
+}
+.AnasayfaMakaleResimLink img:hover{ border-color: 1px solid #000;; 
+}
+
+
+.carousel {height:500px;}
+
+.carousel .item { height:500px; background-color:#906566;}
+
+.carousel-inber > .item > img { position:absolute; top:0; left:0; min-width:100%; height:100px;}
+	
+.col-lg-4{ text-align:center; margin-bottom:50px;}
+/* Slide Alanımız */
+#MySlide{
+	
+}
+#MySlide .item img
+{
+	max-height:450px!important;
+	width:100%!important;
+}
+
+/*Yönetici Listeleme */
+.BilgiList{margin:3px 0!important; padding:2px 0!important; }
+.BilgiList h3 { margin: 0 0 3px 0!important; border-bottom:1px solid #CBCBCB; padding: 2px 0!important; font-size: 20px; }
+.BilgiList h3:hover { color:#983BE8; }

@@ -1,0 +1,21 @@
+
+{% block body %}
+
+<body>
+{% if user.is_authenticated %}
+    <a href="/logout/">Logout</a>
+{% else %}
+
+<form method="post" action=".?next={{ redirect_to }}"> {% csrf_token %}
+    <table border="1">
+    <input type="text" name="username" placeholder="Username"/><br>
+    <input type="password" name="password" placeholder="Password"/></br>
+        </table>
+    <input type="submit" value="Login"/>
+
+<p>Henüz kayıtlı değilseniz <a href="/register/">buraya tıklayarak kayıt olun.</a></p>
+<p>Şifrenimi unuttun ? <a href="/accounts/password/reset/">gel hele gel buraya gel</a></p>
+</form>
+{% endif %}
+</body>
+{% endblock body %}

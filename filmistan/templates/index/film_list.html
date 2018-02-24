@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+    <head>
+<link href="css/bootstrap.min.css" rel="stylesheet"><link href="still.css" rel="stylesheet">
+
+    <img src="http://fs5.directupload.net/images/160328/9o9wbft3.jpg"> </a>
+        <title>Filmistan</title>
+
+    </head>
+
+    <body>
+    <section class="container">
+    <br><a href="/index/" class="button green">Anasayfa</a></br>
+
+<form name="Film List" action="film_list" method="get" accept-charset="utf-8">
+    </form>
+        {% for film in films %}
+    <div>
+        <p>{{ film.title }}{{ film.year|linebreaks }}</p>
+    </div>
+
+    {% endfor %}
+    </section>
+    </body>
+
+</html>

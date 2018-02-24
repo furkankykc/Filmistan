@@ -1,0 +1,140 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+<html>
+{% block header %}
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="{% static 'css/bootstrap.css' %}"/>
+<link rel="stylesheet" href="{% static 'css/bootstrap-theme.css' %}"/>
+<link rel="stylesheet" href="{% static 'css/style.css' %}"/>
+  <script src="{% static 'js/jquery.min.js' %}"></script>
+  <script src="{% static 'js/bootstrap.min.js' %}"></script>
+ <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="{% static 'css/tools_Style.css'%}"/>
+<link rel="stylesheet" href="{% static 'css/jquery.lightbox.css'%}"/>
+  <script src="{% static 'js/bootstrap.min.js' %}"></script>
+  <script  src="{% static 'js/jquery.lightbox.js'%}"></script>
+
+  <script type="text/javascript">
+    $ (document).ready(function(){
+		$(".tooltipAc").tooltip();
+		$(".popoverAc").popover();
+		$('a.galeriAc').lightbox();
+		
+	})
+  </script>
+<title>FİLMİSTAN  ||  Hakkımızda</title>
+</head>
+{% endblock header %}
+{% block body %}
+<body>
+<style> body {
+	background-color:black;}
+.panel{
+    background-color: rgba(0, 0, 0, 0.70);
+}
+
+.a.popoverAc Pointer{
+    color: black;
+}
+</style>
+      <!-- jumbotron başladı -->
+     <div class="container ">
+      <div class="default PaddingTop_20 PaddingBottom_20 MarginBottom_0">
+         <div class="page-header MarginBottom_0 MarginTop_10 PaddingBottom_10 PaddingTop_0">
+            <h2 class=" container  MarginBottom_10 MarginTop_10 PaddingBottom_0 PaddingTop_0 MarginBottom_0">
+              <li class="page-scroll">
+                 HAKKIMIZDA
+                </li>
+             </h2>
+          </div>
+      </div>
+    </div>
+
+   <!-- Jumbotron bitti -->
+<div class="container">
+       <div class="col-lg-12 BgWhiteGri Padding_10 MarginBottom_10">
+<marquee direction=left><h1 style="color:lightblue; font-size:200% ">2016 yılında yayın hayatına giren Filmistan'ın temelleri 4 üniversite öğrencisi tarafından eğitim döneminde ödev aracılığıyla atılmıştır.Daha sonra site ilerletilip şuanki durumunu kazanmıştır.
+</h1></marquee>
+</div>
+</div>
+<div class="container">
+  <h3 class="panel-header text-center"><a href="">YÖNETİCİLER</a></h3>
+     <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 BgWhiteGri  panel panel-default  Padding_10">
+      <a href="https://lh3.googleusercontent.com/-vX0GE9tA3EQ/AAAAAAAAAAI/AAAAAAAAAHI/sPJC7vzlpmo/s120-c/photo.jpg" title="ıuy" class="galeriAc">
+       <img class="img-circle img-responsive" style="width:100%;" src="https://lh3.googleusercontent.com/-vX0GE9tA3EQ/AAAAAAAAAAI/AAAAAAAAAHI/sPJC7vzlpmo/s120-c/photo.jpg" alt="" title="" longdesc=""/></a>
+         <div class=" text-center BilgiList"><h3 class="Pointer tooltipAc" href="" data-toggle="tooltip" data-placement="right" title="Site Sahibi" >Pınar Yazıcı</h3></div>
+         <div class="BilgiList">
+            <a class="popoverAc Pointer" data-container="body" data-toggle="popover" data-placement="top" data-title="Pınar Yazıcı" 
+             data-content="10 Haziran 1996 tarihinde ARTVİN ilinde doğdu.Memleketi ARTVİN/YUSUFELİ
+                          dir.İlkokul,ortaokul ve liseyi Yusufeli de tamamladı.Bilgisayar Mühendisliği
+                          2.sınıf öğrencisidir.">
+                          <i class="glyphicon glyphicon-user"></i>Özgeçmiş</a></div>
+           <p class=" text-left BilgiList"><a href="mailto:pnr.yazc@gmail.com"><i class="glyphicon glyphicon-envelope"></i> pnr.yazc@gmail.com</a></p>
+           <p class=" text-right BilgiList"><a  href="">profili görüntüle  <i class="glyphicon  glyphicon-eye-open"></i></a></p>
+</div> 
+     
+      
+      <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 BgWhiteGri  panel panel-default  Padding_10">
+         <img class="img-circle img-responsive" style="width:100%;" src="https://lh3.googleusercontent.com/-7B-zwh0fq2Y/AAAAAAAAAAI/AAAAAAAAADg/o2EkXt4A440/s120-c/photo.jpg" alt="" title="" longdesc=""/>
+            <div class=" text-center BilgiList"><h3 class="Pointer tooltipAc" href="" data-toggle="tooltip" data-placement="right" title="Site Sahibi">Hannan Orhan</h3></div>
+            <div class="BilgiList">
+            <a class="popoverAc Pointer" data-container="body" data-toggle="popover" data-placement="top" data-title="Hannan Orhan" 
+             data-content="10 Kasım 1995 tarihinde Elazığ ilinde doğdu.Memleketi ELAZIĞ'dır.
+                          İlkokul,ortaokul ve liseyi Elazığ'da de tamamladı.Bilgisayar Mühendisliği
+                          2.sınıf öğrencisidir.">
+                          <i class="glyphicon glyphicon-user"></i>Özgeçmiş</a></div>
+           <p class=" text-left BilgiList"><a href="mailto:orhannan23@gmail.com"><i class="glyphicon glyphicon-envelope"></i>       orhannan23@gmail.com</a></p>
+           <p class=" text-right BilgiList"><a  href="">profili görüntüle <i class="glyphicon  glyphicon-eye-open"></i> </a></p>
+       
+   </div>
+     
+     
+     <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 BgWhiteGri  panel panel-default  Padding_10">
+        <img class="img-circle img-responsive" style="width:100%;" src="https://scontent.cdninstagram.com/t51.2885-19/s150x150/12568191_1725354624365545_645674924_a.jpg" alt="" title="" longdesc=""/>
+           <div class=" text-center BilgiList"><h3 class="Pointer tooltipAc" href="" data-toggle="tooltip" data-placement="right" title="Site Sahibi">Burkay Karakuş</h3></div>
+           <div class="BilgiList">
+            <a class="popoverAc Pointer" data-container="body" data-toggle="popover" data-placement="top" data-title="Burkay Karakuş" 
+             data-content="31 Ekim 1995 tarihinde Mersin ilinde doğdu.Memleketi MERSİN
+                          dir.İlkokul,ortaokul ve liseyi Mersin de tamamladı.Bilgisayar Mühendisliği
+                          2.sınıf öğrencisidir.">
+                          <i class="glyphicon glyphicon-user"></i>Özgeçmiş</a></div>
+           <p class=" text-left BilgiList"><a href="mailto:burkaykarakus@gmail.com"><i class="glyphicon glyphicon-envelope"></i> burkaykarakus@gmail.com</a></p>
+           <p class=" text-right BilgiList"><a  href="">profili görüntüle <i class="glyphicon  glyphicon-eye-open"></i> </a></p>
+ </div>
+ 
+ 
+     <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 BgWhiteGri  panel panel-default  Padding_10">
+        <img class="img-circle img-responsive" style="width:100%;" src="http://pbs.twimg.com/profile_images/638230581072011264/HyqC6VBL_400x400.jpg" alt="" title="" longdesc=""/>
+            <div class=" text-center BilgiList"><h3 class="Pointer tooltipAc" href="" data-toggle="tooltip" data-placement="right" title="Site Sahibi">Furkan Kıyıkçı</h3></div>
+            <div class="BilgiList">
+            <a class="popoverAc Pointer" data-container="body" data-toggle="popover" data-placement="top" data-title="Furkan Kıyıkçı" 
+             data-content="3 Eylül 1996 tarihinde Ankara  ilinde doğdu.Memleketi ANKARA
+                          dIr.İlkokul,ortaokul ve liseyi Ankara de tamamladı.Bilgisayar Mühendisliği
+                          2.sınıf öğrencisidir.">
+                          <i class="glyphicon glyphicon-user"></i>Özgeçmiş</a></div>
+            <p class=" text-left BilgiList"><a href="mailto:furkanfbr@gmail.com"><i class="glyphicon glyphicon-envelope"></i> furkanfbr@gmail.com</a></p>
+            <p class=" text-right BilgiList"><a  href="">profili görüntüle <i class="glyphicon  glyphicon-eye-open"></i> </a></p>
+     </div>
+   </div>
+   
+   <!-- Footer Alanımız Başladı-->
+<div class="navbar navbar-default" style="margin-bottom:0px!important;  background:#cfcfcf;" > 
+         <div class="container">
+      <p class="navbar-text pull-left">
+           Her Hakkı Saklıdır. <a href="#">&copy; </a> 2016
+       </p>
+        <p class="navbar-text pull-right">
+        <a class="" href="indexx.html" title="Filmistan">Filmistan</a>
+      </p>
+      </div>
+      </div>
+      
+      <!-- Footer Alanımız Bitti -->
+</body>
+{% endblock body %}
+</html>

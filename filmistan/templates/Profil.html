@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block body    %}
+
+    <style>
+        body {
+    background-color:black;
+        padding-top:30px;}
+
+.glyphicon {  margin-bottom: 10px;margin-right: 10px;}
+
+small {
+display: block;
+line-height: 1.428571429;
+color: #999;
+	}</style>
+    <div class="panel panel-default">
+     {% if user.is_authenticated %}
+         <center>
+         <h1>HOŞGELDİN {{ request.user.username|upper }}</h1>
+         </center>
+     {% endif %}
+  </div>
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12">
+            <div class="well well-sm">
+                <div class="row">
+                    <div class="col-sm-3 col-md-2">
+                        <img src="http://placehold.it/350x400" alt="" class="img-rounded img-responsive" />
+                    </div>
+                    <div class="col-xs-9 col-sm-10">
+
+              <ul class="list-group">
+              <li class="list-group-item">Kullanıcı Adı: {{ request.user.username }}</li>
+              <li class="list-group-item">Adı: {{ request.user.first_name }}</li>
+              <li class="list-group-item">Soyadı: {{ request.user.last_name }}</li>
+              <li class="list-group-item">E-Mail: <a href="mailto: {{ request.user.email }}">{{ request.user.email }} </a></li>
+    </ul>
+    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock body %}
