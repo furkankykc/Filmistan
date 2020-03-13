@@ -1,5 +1,5 @@
 {% extends 'base.html' %}
-{% load staticfiles %}
+{% load static %}
 
 {% block body %}
 <body>
@@ -54,7 +54,7 @@
 
 </style>
 {% for f in film %}
-<a class="film" href="/film/{{ f.pk}}"><img class="" alt="" src={% static f.profile_image %} width="200" height="350"></a>
+<a class="film" href="/film/{{ f.pk}}"><img class="" alt="" src={% static f.profile_image.url %} width="200" height="350"></a>
 
 {% endfor %}
 </body>

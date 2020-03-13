@@ -1,5 +1,5 @@
 ﻿{% extends 'base.html' %}
-{% load staticfiles %}
+{% load static %}
 {% block content %}
     <style>
     body {
@@ -58,7 +58,7 @@
     <div class="container">
             <div class="col-xs-12 col-sm-4">
               <figure>
-                    <img src={% static film.profile_image %} width="333" height="500">
+                    <img src={% static film.profile_image.url %} width="333" height="500">
                </figure>
                  <style>
                         .list-group-item{
@@ -87,7 +87,7 @@
                           <div class="box">
                   <div class="box-content">
                       <h1 class="tag-title">Özet</h1>
-                      <hr /> <p> {{film.description}} </p> <br/>
+                      <hr /> <p> {{film.desc}} </p> <br/>
               </div>
               </div>
               </div>
